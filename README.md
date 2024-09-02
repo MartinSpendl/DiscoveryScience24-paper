@@ -1,8 +1,8 @@
 # Discovery Science 2024 // Transcription-decay decomposition loss using self-supervised CoxPH
 
-This is code to reproduce key results and figures from the article: **Latent embedding based on a transcription-decay decomposition of mRNA dynamics using self-supervised CoxPH**.
+This code reproduces key results and figures from the article: **Latent embedding based on a transcription-decay decomposition of mRNA dynamics using self-supervised CoxPH**.
 
-Autoencoders are trained using different loss function.
+Autoencoders are trained using different loss functions.
 
 <img src="figures/thumb/autoencoder-training-schema.png" alt="autoencoder-training" width="600"/>
 
@@ -10,9 +10,9 @@ We compare latent space representations of the models by evaluating their perfor
 
 <img src="figures/thumb/autoencoder-downstream.png" alt="autoencoder-downstream" width="600"/>
 
-## Instalation
+## Installation
 
-The code was tested on Ubuntu 20.04.4 LTS and MacOS 13.1. With python version 3.10.8.
+The code was tested on Ubuntu 20.04.4 LTS and MacOS 13.1. With Python version 3.10.8.
 
 Follow these steps to prepare the environment:
 
@@ -58,7 +58,7 @@ Download multi-omic data from the [cBioPortal](https://www.cbioportal.org/study/
 
 ### Cancer Cell Line Encyclopedia (CCLE)
 
-Download gene expression data and drug screening data from the [Genomics of Drug Sensitivity in Cancer](https://www.cancerrxgene.org/downloads/bulk_download).
+Download gene expression and drug screening data from the [Genomics of Drug Sensitivity in Cancer](https://www.cancerrxgene.org/downloads/bulk_download).
 
 
 ### Genesets
@@ -67,7 +67,7 @@ L1000 geneset from the GEO project [GSE92742](https://www.ncbi.nlm.nih.gov/geo/q
 
 ## Reproduce results
 
-Firstly, run all the scipts in the **/scipts** directory:
+Firstly, run all the scripts in the **/scripts** directory:
 
 ```bash
 
@@ -80,8 +80,22 @@ python scripts/model-training-5-CV-TCGA.py --hyper-parameter-optimization
 python scripts/model-training-clustering.py --hyper-parameter-optimization
 ```
 
-_Note that due to hyper-parameter optimization, the training can take from several days to weeks if CUDA is not enabled._
+_Note that the training can take several days to weeks due to hyper-parameter optimization if CUDA is not enabled._
 
 Secondly, run notebooks in the **/notebooks** directory.
 
 *Figures from the notebooks are stored in the /figures directory.*
+
+## How to cite
+_to be updated_
+```bibtex
+@InProceedings{spendl2024latent,
+author="{\v{S}}pendl, Martin
+and Curk, Toma{\v{z}
+and Zupan, Bla{\v{z}}",
+title="Latent Embedding Based on a Transcription-Decay Decomposition of mRNA Dynamics Using Self-Supervised CoxPH",
+booktitle="Discovery Science",
+year="2024",
+publisher="Springer Nature Switzerland",
+}
+```
